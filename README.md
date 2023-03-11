@@ -1,3 +1,25 @@
+# React Chat Application
+
+This is just learning project. I made it just to continue improve familiarity with react.js and node.js. It a project You may find interesting because it support modern feactures of chat sytem including online and offline, group chat and many more.
+
+## Authors
+
+- [Bikorimana Saveur](https://www.github.com/saveur1)
+
+## API Reference
+
+- [Chat application Documentation](http://localhost:5000)
+
+## Installation
+
+First you will have to clone a whole project then follow the following instructions:
+
+Install the project with npm
+
+```bash
+  npm install
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

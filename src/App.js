@@ -1,40 +1,28 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import SignUp from './pages/sign-up';
+import { Routes,Route } from 'react-router-dom';
+import Login from './pages/sign-in';
+import Dashboard from './pages/dashboard';
 
 function App() {
+  const theme = extendTheme({
+     colors:{
+      brand:{
+        100:"#F5F7FB",
+        200:"#7269EF",
+        300:"#E6EBF5",
+        search:"#A096A2"
+      }
+     }
+    });
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
+      <Routes>
+        <Route path="/" index element={<Dashboard/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/login" element={<Login/>}/>
+      </Routes>
     </ChakraProvider>
   );
 }

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Work+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@300&family=Work+Sans:ital,wght@1,300&display=swap');
+
+* {
+    font-family: 'Outfit', sans-serif;
+}
+
+.heading6{
+    font-size:small;
+}
+.userChatName {
+    color:#4C5762;
+    font-family:'inter',sans-serif;
+    font-size:70%;
+}
+/* Desigining Dashboard */
+.groupIcon {
+    margin-top:20%;
+}
+.sideIcon{
+    width: 70%;
+}
+.sideIcon:hover {
+    cursor: pointer;
+    filter: invert(0.5) sepia(1) hue-rotate(200deg) saturate(4) brightness(1);
+}
+.chatIcon {
+    width: 70%;
+}
+.avatarIcon:hover, .chatIcon:hover {
+    cursor:pointer;
+}
+.chatIcon:hover {
+    filter: grayscale(70%) sepia(70%);
+}
+.activeUser {
+    margin-top: 3px;
+    border-radius: 6px;
+    width: 60px;
+    height: 40px;
+    background-color: #E6EBF5;
+    text-align: center;
+}
+.activeUser .activeImg {
+    position:relative;
+    top:-10px;
+}
+.activeUser .name {
+    position: relative;
+    top: -13px;
+    font-size: 11px;
+}
+
+.lastestMsg {
+    font-size:60%;
+    color:#AA9BA6;
+}
+.chatTimer {
+    margin-top:5px;
+    font-size:12px;
+    color:#718298;
+}
+
+.notPanel {
+    font-size:12px;
+    padding:3px;
+    border-radius:3px;
+    width:20px;
+    text-align: center;
+    background:#c96464;
+    opacity:0.7;
+}
+body {
+    overflow: hidden;
+}
+
+.panel_wrapper {
+    width:100%;
+    overflow-y: auto;
+    height:100vh;
+    padding:10%;
+}
+.panel_wrapper::-webkit-scrollbar {
+    width: 5px;
+}
+
+.panel_wrapper::-webkit-scrollbar-track {
+    background-color: #F5F7FB;
+}
+
+.panel_wrapper::-webkit-scrollbar-thumb {
+    background-color: #c9cfda;
+}
+
+.panel_wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #787e8a;
+}
+
+/* Message Tab */
+
+.message_panel {
+    position:relative;
+    width:100%;
+    height:100vh;
+}
+
+.message_headers,.message_footers {
+    padding:10px 10px;
+    border-bottom: 1px solid #c9cfda;
+}
+
+.message_footers {
+    width:100%;
+    bottom:0px;
+    border-top: 1px solid #c9cfda;
+  position: absolute;
+}
+
+.messages_boxes {
+   width:100%;
+   height:100vh;
+   padding-bottom: 70px;
+   overflow-y: auto;
+}
